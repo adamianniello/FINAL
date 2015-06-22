@@ -62,4 +62,12 @@ video {
   transform: translate(-50%, -50%);
 }
 
+span {
+     font-size: 25px;
+    padding: 40%;
+    text-shadow: 3px 3px 3px #ccc;
+    color: transparent;
+    /* text-shadow must have an initial value for the animation to work. To animate from a "shadowless" state, set the shadow to 0 offset and 0 blur (e.g. 0 0 0 #000;) */
+}
+
      
