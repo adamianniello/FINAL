@@ -52,22 +52,39 @@ Developer @GA in NYC
 /*******************************************/
 
 
-html {overflow-x:hidden;}
-body {margin:0;padding:0;}
-
-video {
- position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.fullscreen-bg {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: -100;
+}
+ 
+.fullscreen-bg__video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
-span {
-     font-size: 25px;
-    padding: 40%;
-    text-shadow: 3px 3px 3px #ccc;
-    color: transparent;
-    /* text-shadow must have an initial value for the animation to work. To animate from a "shadowless" state, set the shadow to 0 offset and 0 blur (e.g. 0 0 0 #000;) */
+@media (min-aspect-ratio: 16/9) {
+  .fullscreen-bg__video {
+    height: 300%;
+    top: -100%;
+  }
 }
+ 
+@media (max-aspect-ratio: 16/9) {
+  .fullscreen-bg__video {
+    width: 300%;
+    left: -100%;
+  }
+}
+ 
+
+
 
      
